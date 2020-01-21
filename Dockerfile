@@ -39,7 +39,5 @@ RUN mkdir mkcert && cd mkcert &&\
 	mv mkcert-v1.4.1-linux-amd64 mkcert && chmod +x ./mkcert &&\
 	./mkcert -install && ./mkcert localhost
 
-# service nginx start
-# service mysql start
-# service php7.3-fpm start
-#chrome://flags/#allow-insecure-localhost
+COPY srcs/start_serveur.sh /
+CMD	bash start_serveur.sh
